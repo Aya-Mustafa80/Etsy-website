@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html> 
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+  * {
+  box-sizing: border-box;
+}
+  #imge1:hover{
+  box-shadow: 2px 3px 4px 2px grey;
+  
+  }
+  img{
+    width: 250px;
+    height: 200px;
+  }
+ p{
+     line-height: 15px;
+ }
+ .header{
+    margin-top: 20px;
+}
+.header .h1{
+    color: orangered;
+    font-weight: 100;
+    font-family: 'Playfair Display SC', serif;
+}
+.input-search{
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 30px;
+    background-color: #eee;
+}
+.input-search:hover{
+    border: 1px solid rgb(70, 65, 65);
+}
+.header input{
+    border: none;
+    color: gray;
+    background-color: #eee;
+    font-size: medium;
+    height: 100%;
+}
+.header .fa-search{
+    margin-top: 20px;
+    float: right;
+}
+.fa-shopping-cart{
+    font-size: 25px;
+}
+.header .signin:hover{
+    background-color: #eee;
+    border: 1px solid #eee;
+    border-radius: 60%;
+}
+.header .fa-shopping-cart:hover{
+    background-color: #eee;
+    border: 1px solid #eee;
+    border-radius: 50%;
+}
+ ul{
+    list-style: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.links-header{
+    display: inline-flex;
+}
+.a1{
+  color: black;
+  display: block;
+}
+.a1:hover{
+  text-decoration:underline;
+  color: black;
+}
+@media only screen and (max-width:800px) {
+  /* For mobile phones: */
+   .res{
+    width: 250px;;
+  }
+}
+</style>
+</head>
+<body class="res1">
+<h2 style="padding-block: 30px; margin: 40px;">Jewelry & Accessories</h2>
+<div class="container">
+  <div class="row" style="padding: 10px;">
+<div class="col-sm-6 col-lg-3" (click)="p(list)" *ngFor="let list of lists">
+    <img src="{{list.url}}" width="220" height="180" id="imge1">
+    <p style="margin-top:10px;">{{list.h}}</p>
+    <p style="font-size:small; color:grey;">{{list.hgray}}</p>
+    <p style="color: indianred;">{{list.hcolor}}</p>
+    <small class="fa fa-star"></small><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+    <p style="display: inline; color: grey;">{{list.hstar}}</p>
+    <h3 style="line-height: 50px;">{{list.price}}</h3>
+    <p style="color:lightseagreen;font-size: small;"><del>{{list.del}}</del>{{list.desc}}</p>
+    <span class="badge badge-info">{{list.shipb}}</span>
+    <span class="badge badge-success">{{list.shipg}}</span>
+    <br>
+    <br></div></div></div>
+<hr>
+
+</body>
+</html>
+
+

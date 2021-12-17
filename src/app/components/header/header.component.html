@@ -1,0 +1,110 @@
+
+<!-- search header -->
+
+<div class="container-fluid header">
+  <div class="row">
+      <h1 class="col-lg-2 col-sm-2 h1 text-center"><a routerLink="/Home" 
+        routerLinkActive="active"> Etsy</a></h1>
+      <div class="input-search col-lg-8  col-sm-8 text-center">
+      <input  class="text-center col-lg-8 col-sm-8" type="search" placeholder="Search for anything" id="search"/>
+      <i class="fa fa-search "></i>
+      </div>
+      <a routerLink="/signin" routerLinkActive="active" class="col-lg-1 col-sm-1 signin" id="bt" (click)="toggle()" >sign in</a>
+      <a routerLink="/Cart" 
+      routerLinkActive="active" class="col-lg-1 col-sm-1"><i class="fa fa-shopping-cart"><span class="badge badge-light" id="c">{{x}}</span></i></a>
+  </div>
+<!-- links header  -->
+
+  <div class="row-fluid text-center">
+      <ul class="links-header container col-lg-12 col-sm-12">
+       
+          <li  class="col-lg-3 col-sm-3"><a routerLink="/Jewelry&Accessories" 
+            routerLinkActive="active">Jewelry & Accessories </a></li>
+          <li class="col-lg-3 col-sm-3"><a routerLink="/Clothing&Shoes" 
+            routerLinkActive="active">Clothing & Shoes </a></li>
+          <li class="col-lg-3 col-sm-3"><a routerLink="/Home&Living" 
+            routerLinkActive="active">Home & Living </a></li>
+          <li class="col-lg-3 col-sm-3"><a routerLink="/Wedding&Party" 
+            routerLinkActive="active">Wedding & Party </a></li>
+      </ul>
+  </div>
+<!-- photo header -->
+
+  <div class="row-fluid text-center photo_content">
+      <h1>Find things you'll love. Support independent sellers. Only on Etsy.</h1>
+      <h3>Everyday finds</h3>
+      
+      <span class="col-sm-2">
+          <img class="rounded-circle" src="assets\images\gabrielle-henderson-pL1qsBqCatk-unsplash.jpg"/>
+          
+      </span>
+      <span class="col-sm-2">
+          <img class="rounded-circle" src="assets\images\sincerely-media-gGs6Bvf6FTA-unsplash.jpg"/>
+          
+      </span>
+      <span class="col-sm-2">
+          <img class="rounded-circle" src="assets\images\jacek-dylag-FXXfE5RqkqY-unsplash.jpg"/>
+          
+      </span>
+      <span class="col-sm-2">
+          <img class="rounded-circle" src="assets\images\eleni-koureas-0Hv7W_p410w-unsplash.jpg"/>
+          
+      </span>
+      <span class="col-sm-2">
+          <img class="rounded-circle" src="assets\images\jess-harper-sunday-O1DhTK0_1iQ-unsplash.jpg"/>
+          
+      </span>
+      <span class="col-sm-2">
+          <img class="rounded-circle" src="assets\images\peter-hansen-g__1qQUENN0-unsplash.jpg"/>
+          
+      </span>
+   </div>
+
+
+
+
+   <ng-container *ngIf="show">
+    <div class="sign_in shadow-lg p-3 mb-5 bg-white rounded">
+        
+        <form #userForm="ngForm" class=" container-fluid">
+            <div class="row">
+                <h2 class="" style="margin-left: 25px ;">Sign in</h2>
+                <button style="margin-left: 160px;" (click)="Register()" type="button" class=" btn btn-outline-secondary">Register</button>
+            </div>
+            <div class="form-group">
+                <label for="emailHelp">Email address</label>
+                <input type="email" required ngModel name="email" #email="ngModel" class="form-control" id="emailHelp" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="Password1">Password</label>
+                <input type="password" required ngModel name="pass" #pass="ngModel" class="form-control" id="Password1">
+            </div>
+          
+            <div class="form-group" style="float: left;">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" checked>
+                  <label class="form-check-label" for="invalidCheck">
+                      Stay signed in
+                  </label>
+                </div>
+            </div>
+              <div style="float: right;">
+                  <a href="#" (click)="forget()">Forgot your password?</a>
+              </div>
+              <button class="bttn move" (click)="toggle2()" type="submit">Sign in</button>
+              
+            </form>
+            <h6>-----------------OR-------------------</h6>
+              <a href="">Trouble signing in?</a>
+              <button class="bt move"><i class="fa fa-google"></i>Continue With Google</button>
+              <button class="bt move" ><i class="fa fa-facebook-f"></i>Continue With Facebook</button>
+              <button class="bt move" ><i class="fa fa fa-apple"></i>Continue With Apple</button>
+              <p>By clicking Sign in or Continue with Google, Facebook, or Apple, you agree to Etsy's Terms of Use and Privacy Policy. Etsy may send you communications; you may change your preferences in your account settings. We'll never post without your permission. </p>
+            
+         </div>
+</ng-container>  
+
+ 
+</div>
+ 

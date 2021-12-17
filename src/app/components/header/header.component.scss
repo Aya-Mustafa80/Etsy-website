@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap');
+
+@mixin Transition {
+    transition: all 1s ease-in-out;
+    
+}
+h1
+{
+    a{
+    color: orangered
+    }
+} 
+@mixin sign_shoping {
+    color: rgb(65, 63, 63);
+    text-align: center;
+    padding: 8px;
+}
+img{
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+// search header 
+.header{
+    margin-top: 20px;
+}
+.header .h1{
+    color: orangered;
+    font-weight: 100;
+    font-family: 'Playfair Display SC', serif;
+}
+.input-search{
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 30px;
+    background-color: #eee;
+}
+.input-search:hover{
+    border: 1px solid rgb(70, 65, 65);
+}
+.header input{
+    border: none;
+    color: gray;
+    background-color: #eee;
+    font-size: medium;
+    height: 100%;
+}
+.header .fa-search{
+    margin-top: 20px;
+    float: right;
+}
+.header .signin{
+    @include sign_shoping;
+}
+.fa-shopping-cart{
+    @include sign_shoping;
+    font-size: 25px;
+}
+.header .signin:hover{
+    background-color: #eee;
+    border: 1px solid #eee;
+    border-radius: 60%;
+    @include Transition;
+}
+.header .fa-shopping-cart:hover{
+    background-color: #eee;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    @include Transition;
+}
+
+// links header 
+ul{
+    list-style: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.links-header{
+    display: inline-flex;
+}
+
+
+// photo header 
+
+.photo_content{
+    background-color: rgba(94, 149, 172, 0.705);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.photo_content h1{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+}
+.photo_content img:hover{
+    box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.651);
+}
+
+@mixin sign_shoping {
+    color: rgb(65, 63, 63);
+    text-align: center;
+    padding: 8px;
+}
+img{
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+// search header 
+
+.input-search{
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 30px;
+    background-color: #eee;
+}
+.input-search:hover{
+    border: 1px solid rgb(70, 65, 65);
+}
+.header input{
+    border: none;
+    color: gray;
+    background-color: #eee;
+    font-size: medium;
+    height: 100%;
+}
+.header .fa-search{
+    margin-top: 20px;
+    float: right;
+}
+.header .signin{
+    @include sign_shoping;
+}
+.fa-shopping-cart{
+    @include sign_shoping;
+    font-size: 25px;
+}
+.header .signin:hover{
+    background-color: #eee;
+    border: 1px solid #eee;
+    border-radius: 60%;
+    @include Transition;
+}
+.header .fa-shopping-cart:hover{
+    background-color: #eee;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    @include Transition;
+}
+
+// links header 
+ul{
+    list-style: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.links-header{
+    display: inline-flex;
+}
+
+
+// sign in
+
+
+.sign_in{
+    margin: 20px auto;
+    width: 400px;
+    display: block;
+    padding: 20px;
+    color: black;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    border-radius: 10px;
+    text-align: center;
+    // visibility: hidden;
+    position: absolute;
+    z-index: 10;
+    left: 450px;
+    right: center;
+}
+.sign_in form{
+    display: block;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+}
+.sign_in .inpt{
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.bttn{
+    width: 100%;
+    background-color: rgb(30, 31, 32);
+    color: white;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px;
+
+}
+.bttn2{
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(211, 0, 0);
+    border: 2px solid rgb(209, 3, 3);
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 5px;
+
+}
+.bt{
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+
+}
+.sign_in .fa-google{
+  color: red;
+  margin-right: 4px;
+}
+.sign_in .fa-facebook-f{
+  color: dodgerblue;
+  margin-right: 4px;
+}
+.sign_in .fa-apple{
+  color: rgb(0, 0, 0);
+  margin-right: 4px;
+}
+.move:hover{
+  transform: scale(1.05,1);
+  transition: all .5s ease-in-out;
+}

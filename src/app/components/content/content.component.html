@@ -1,0 +1,58 @@
+<div class="container content-p">
+  <div class="row">
+      <span class="col-sm-4">
+          <span class="fa fa-check"></span>
+          <span> Unique everything
+              We have millions of one-of-a-kind items, so you can find whatever you need (or really, really want).
+          </span>
+      </span>
+      <span class="col-sm-4">
+          <span class="fa fa-check"></span>
+          <span> Independent sellers
+            Buy directly from someone who put their heart and soul into making something special.                
+          </span>
+      </span>
+      <span class="col-sm-4">
+          <span class="fa fa-check"></span>
+          <span> Secure shopping
+           We use best-in-class technology to protect your transactions.                
+          </span>
+      </span>
+  </div>
+</div>
+<!-- divs -->
+
+<div class="container-fluid">
+  <h3  class="text-center">Popular right now</h3>
+  <div class=" row content-photos text-center">
+      
+    <div (click)="p(list)" *ngFor="let list of lists" class="card card2 col-lg col-sm-5">
+      <img src="{{list.url}}"   class="card-img-top" alt="..."  >
+      <div class="card-body">
+           <h6>{{list.h1}}</h6>
+            <h6>{{list.h2}}</h6>
+            <small class="fa fa-star"></small><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <h5>{{list.h3}}</h5>
+       </div>
+       
+       </div>
+    
+  </div>
+  </div>
+  
+
+<!-- divs -->
+<div class="container-fluid">
+<span style="font-size: large;color: black;"> Shop our selections </span> <span> Items hand-picked by our editors </span>
+<div class=" row content-photos text-center">
+  
+  <div *ngFor="let list2 of lists2" class="card col-lg col-sm-5 card1">
+    <img src="{{list2.url}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">{{list2.h1}}</p>
+    </div>
+  </div>
+ 
+</div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,131 @@
+
+@mixin Border($size,$type,$color) {
+  border: $size $type $color;
+}
+@mixin Border_Radius($size) {
+  border-radius: $size;
+}
+@mixin Border_RadiusINp{
+  border-left: none;
+  padding: 10px;
+  font-size: medium;
+  background-color: rgb(255, 255, 255);
+}
+@mixin Padding($top,$right,$bottom,$left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+@mixin Margin($top,$right,$bottom,$left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+body{
+  transform-style: preserve-3d;
+  perspective: 600px;
+}
+
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+
+.footer{
+  @include Padding(40px,0 ,40px ,0);
+  @include Margin(25px,0 ,0 ,0 );
+  text-align: center;
+}
+.footer h5{
+  @include Margin(0,0 ,40px ,0 );
+}
+.footer .text-start{
+  text-align: start;
+  @include Margin(40px,0 ,0 ,0 );
+}
+.footer .text-start h6{
+  @include Margin(0,0 ,0 ,36px );
+}
+
+.input-search{
+  background-color: transparent;
+  padding: 10px;
+ 
+}
+.input-search input{
+  @include Border(1px,solid ,rgb(192, 191, 191) );
+  @include Border_RadiusINp;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  color: gray;
+  height: 100%;
+}
+.input-search input:hover{
+  @include Border(1px,solid ,rgb(97, 92, 92) );
+}
+.input-search button{
+  @include Border(1px,solid, rgb(192, 191, 191) );
+  @include Border_RadiusINp;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.input-search button:hover{
+  @include Border(1px,solid ,rgb(97, 92, 92) );
+  background-color: rgb(19, 17, 17);
+  color: white;
+}
+.footer .go-to{
+  border: 1px solid rgb(66, 63, 63);
+  border-radius: 30px;
+  margin-top: 20px;
+  padding: 5px 10px;
+  background: transparent;
+}
+.footer .go-to:hover{
+  border: 2px solid rgb(10, 9, 9);
+}
+.footer ul li .social li{
+  margin: 8px;
+  
+}
+.footer h6{
+  color: white;
+  font-weight: bold;
+}
+.footer a{
+  color: rgb(253, 253, 253);
+}
+.footer a:hover{
+  color: rgb(198, 213, 226);
+  text-decoration: underline;
+  
+}
+footer{
+  color: white;
+  background-color:rgb(19, 50, 63);
+  padding: 18px;
+}
+footer a{
+  color: white;
+
+}
+footer .a:hover{
+  border: 1px solid rgb(66, 63, 63);
+  border-radius: 30px;
+  margin-top: 20px;
+  padding: 5px 10px;
+  background: rgb(47, 88, 105);
+}
+footer ul{
+  display: inline-flex;
+  float: right;
+}
+footer ul li a:hover{
+  color: dodgerblue;
+  text-decoration: underline;
+}

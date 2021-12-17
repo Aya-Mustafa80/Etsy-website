@@ -1,0 +1,44 @@
+
+    <div *ngIf="e" class="container-fluid content_cart">
+      <div class="shadow p-3 mb-5 bg-white rounded"><h1>Your cart is empty. </h1></div>
+      <p class="fa fa-leaf">  Etsy offsets carbon emissions from every delivery</p>
+
+  </div>
+   <div style="padding: 30px; width: 80%;" *ngIf="eo" class="container"  >
+    <div class="row" style="padding: 10px;">
+<div  class="col-sm-6 col-lg-3"  *ngFor="let prod of prods">
+      <img src="{{prod.url}}" width="50" height="50" id="imge1">
+      <h6>{{prod.h1}}</h6>
+            <h6>{{prod.h2}}</h6>
+            <h5>{{prod.h3}}</h5>
+
+      <p style="margin-top:10px;">{{prod.h}}</p>
+      <p style="font-size:small; color:grey;">{{prod.hgray}}</p>
+      <p style="color: indianred;">{{prod.hcolor}}</p>
+      <small class="fa fa-star"></small><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+      <p style="display: inline; color: grey;">{{prod.hstar}}</p>
+      <h3 style="line-height: 50px;">{{prod.price}}</h3>
+      <p style="color:lightseagreen;font-size: small;"><del>{{prod.del}}</del>{{prod.desc}}</p>
+      <span class="badge badge-info">{{prod.shipb}}</span>
+      <span class="badge badge-success">{{prod.shipg}}</span>
+      <br>
+      <br></div></div>
+      <button (click)="c()"class="container" style="width: 50%; height: 35px; background-color:black ; color: white; border: black solid 3px; margin-left: 220px;"  >Clear products</button>
+    </div>
+  <div class="footer_cart">
+      <hr>
+      <footer class="container-fluid">
+          <a class="a col-sm-6" href="###"><i class="fas fa-globe-americas"></i>Egypt | English(US) | $(USD) </a>
+          <ul class="col-sm-6">
+              <li>&copy; 2020 Etsy,ino </li>
+              <li><a href="#"> Terms of Use </a></li>
+              <li><a href="#"> Privacy </a></li>
+              <li><a href="#"> Interest-based ads </a></li>
+          </ul>
+      </footer>
+      <div class="div_desc">
+          <p>
+              Merchant is Etsy, Inc. (USA) or Etsy Ireland UC (Ireland), depending on the currency in which the Seller transacts. See Etsy Payments Terms of Use.</p>
+              <span>Etsy, Inc., USA 117 Adams Street Brooklyn , </span><span> NY 11201 Etsy Ireland UC 66/67 Great Strand Street Dublin 1 </span>
+      </div>
+  </div>
